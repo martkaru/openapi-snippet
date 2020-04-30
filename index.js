@@ -151,7 +151,7 @@ const getResourceName = function (urlStr) {
 const formatTarget = function (targetStr) {
   const language = targetStr.split('_')[0]
   const title = capitalizeFirstLetter(language)
-  var library = targetStr.split('_').slice(1).join('_')
+  let library = targetStr.split('_').slice(1).join('_')
 
   const validTargets = HTTPSnippet.availableTargets()
   let validLanguage = false
