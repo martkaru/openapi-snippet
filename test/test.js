@@ -19,6 +19,14 @@ test('Getting snippets should not result in error or undefined', function (t) {
   t.notEqual(result, undefined)
 })
 
+test('Getting snippets with more than one dash should not result in error or undefined', function (t) {
+  t.plan(1)
+
+  const result = OpenAPISnippets.getSnippets(InstagramOpenAPI, ['clojure_clj_http'])
+  t.notEqual(result, undefined)
+})
+
+
 test('An invalid target should result in error', function (t) {
   t.plan(1)
 
